@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>AI Crop Recommendation</title>
+</head>
+    <body>
+    <div class="container">
+        <h2>AI Crop Recommendation 🌾</h2>
+
+        <form action="/predict" method="post">
+
+            <label>நைட்ரஜன் (Nitrogen)</label>
+            <input name="N" placeholder="Enter Nitrogen value" required>
+
+            <label>பாஸ்பரஸ் (Phosphorus)</label>
+            <input name="P" placeholder="Enter Phosphorus value" required>
+
+            <label>பொட்டாசியம் (Potassium)</label>
+            <input name="K" placeholder="Enter Potassium value" required>
+
+            <label>வெப்பநிலை (Temperature °C)</label>
+            <input name="temperature" placeholder="Enter Temperature" required>
+
+            <label>ஈரப்பதம் (Humidity %)</label>
+            <input name="humidity" placeholder="Enter Humidity" required>
+
+            <label>pH மதிப்பு</label>
+            <input name="ph" placeholder="Enter pH value" required>
+
+            <label>மழை அளவு (Rainfall mm)</label>
+            <input name="rainfall" placeholder="Enter Rainfall" required>
+
+            <button type="submit">🌱 Recommend Crop</button>
+        </form>
+    </div>
+</body>
+</html>
